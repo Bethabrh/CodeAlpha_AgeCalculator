@@ -1,0 +1,167 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0f172a;
+overflow:hidden;
+color:white;
+}
+
+/* Animated background */
+
+.background{
+position:fixed;
+width:200%;
+height:200%;
+background:linear-gradient(
+45deg,
+#6366f1,
+#ec4899,
+#06b6d4,
+#22c55e
+);
+background-size:400% 400%;
+animation:gradient 15s ease infinite;
+z-index:-1;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Main card */
+
+.container{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:18px;
+width:420px;
+text-align:center;
+box-shadow:0 25px 50px rgba(0,0,0,0.4);
+}
+
+/* Title */
+
+h1{
+font-size:32px;
+margin-bottom:8px;
+}
+
+.subtitle{
+font-size:14px;
+opacity:0.8;
+margin-bottom:30px;
+}
+
+/* Input */
+
+.input-box{
+margin-bottom:20px;
+text-align:left;
+}
+
+label{
+font-size:14px;
+margin-bottom:6px;
+display:block;
+}
+
+input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:none;
+font-size:15px;
+}
+
+/* Button */
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#6366f1;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+background:#4f46e5;
+}
+
+/* Result grid */
+
+.result-card{
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+}
+
+.result-item{
+flex:1;
+background:rgba(255,255,255,0.15);
+margin:5px;
+padding:20px;
+border-radius:12px;
+}
+
+.result-item h2{
+font-size:28px;
+color:#ffd369;
+}
+
+.result-item p{
+font-size:13px;
+opacity:0.8;
+}
+
+/* Extra info */
+
+.extra-info{
+margin-top:20px;
+font-size:14px;
+opacity:0.9;
+}
+
+.error{
+color:#ff6b6b;
+margin-top:10px;
+}
+
+/* Footer */
+
+footer{
+margin-top:30px;
+font-size:12px;
+opacity:0.6;
+}
+
+/* Responsive */
+
+@media(max-width:480px){
+
+.container{
+width:90%;
+}
+
+.result-card{
+flex-direction:column;
+}
+
+}
